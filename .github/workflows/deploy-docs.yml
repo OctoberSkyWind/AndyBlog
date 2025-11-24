@@ -23,6 +23,9 @@ jobs:
 
       - name: 安装 pnpm
         uses: pnpm/action-setup@v4
+        with:
+          # 填写你本地查到的具体版本号
+          version: 10.18.3
 
 
       - name: 设置 Node.js
