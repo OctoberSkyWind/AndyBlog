@@ -5,7 +5,7 @@ import { webpackBundler } from '@vuepress/bundler-webpack'
 
 export default defineUserConfig({
   lang: 'en-US',
-
+  base: '/AndyBlog',
   title: 'VuePress',
   description: 'My first VuePress Site',
 
