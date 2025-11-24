@@ -1,2 +1,0 @@
-# AndyBlog
-AndyBlog
