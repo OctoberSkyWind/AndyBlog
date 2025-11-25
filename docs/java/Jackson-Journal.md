@@ -1,3 +1,0 @@
-# Jackson-Journal
-
-## 
