@@ -12,25 +12,41 @@ export default defineUserConfig({
   theme: defaultTheme({
     logo: 'https://vuejs.press/images/hero.png',
 
-    navbar: [
-      '/',
-      {
-        text: 'Article',
-        link: '/article/',
-      },
-      {
-        text: 'Category',
-        link: '/category/',
-      },
-      {
-        text: 'Tag',
-        link: '/tag/',
-      },
-      {
-        text: 'Timeline',
-        link: '/timeline/',
-      },
-    ],
+      navbar: [
+          '/',
+          {
+              text: 'Article',
+              link: '/article/',
+          },
+          {
+              text: 'Category',
+              link: '/category/',
+          },
+          {
+              text: 'Tag',
+              link: '/tag/',
+          },
+          {
+              text: 'Timeline',
+              link: '/timeline/',
+          },
+          {
+              text: 'interviewAndOutline',
+              link: '/interviewAndOutline/',
+          },
+          {
+              text: 'java',
+              link: '/java/',
+          },
+          {
+              text: 'linux',
+              link: '/linux/',
+          },
+          {
+              text: 'codePitDiary',
+              link: '/codePitDiary/',
+          },
+      ],
   }),
 
   plugins: [
