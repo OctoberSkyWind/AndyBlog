@@ -1,7 +1,10 @@
-# mint环境下软件安装
+# SoftwareInstallInMint
 
+[TOC]
 [[toc]]
+
 ## 环境
+
 ```bash
 
 andy@andy-MS-7D90:~/AndyHome/nvm$ cat /etc/os-release 
@@ -27,8 +30,8 @@ Release:        22.1
 Codename:       xia
 
 ```
-## 软件安装
 
+## 软件安装
 
 ### datagrip
 
@@ -134,5 +137,84 @@ npm -v
 #v20.19.1
 #andy@andy-MS-7D90:~/AndyHome/nvm$ npm -v
 #10.8.2
+
+```
+
+### NoSQLBooster
+
+```bash
+# 1. 先行下载了 nosqlbooster4mongo-10.0.8.tar.gz 
+# andy@andy-MS-7D90:~/下载$ ls |grep nosql
+# nosqlbooster4mongo-10.0.8.tar.gz
+# andy@andy-MS-7D90:~/下载$ pwd
+# /home/andy/下载
+# andy@andy-MS-7D90:~/下载$ 
+
+
+# 2. 安装系统依赖（必装）
+# 更新软件源
+apt update
+
+
+# 3.仅安装系统仍支持的依赖（全部可正常定位）
+sudo apt install -y \
+  libxss1 libnss3 libgtk-3-0t64 libnotify4 \
+  libxtst6 libatspi2.0-0t64 libdrm2 libgbm1 libasound2t64 \
+  libx11-xcb1 libxcb-dri3-0 libxrandr2 libxi6 \
+  fonts-wqy-microhei fonts-wqy-zenhei
+
+# 4.部署程序到 /opt（标准化安装）
+# 创建安装目录
+sudo mkdir -p /opt/nosqlbooster
+# 解压压缩包到 /opt（自动处理文件夹层级）
+sudo tar -zxvf /home/andy/下载/nosqlbooster4mongo-10.0.8.tar.gz -C /opt/nosqlbooster --strip-components=1
+# 赋予可执行权限
+sudo chmod +x /opt/nosqlbooster/nosqlbooster4mongo
+# 建立全局软链接（任意目录可启动）
+sudo ln -s /opt/nosqlbooster/nosqlbooster4mongo /usr/local/bin/nosqlbooster
+# 还原普通用户权限
+sudo chown -R andy:andy /opt/nosqlbooster
+sudo chown andy:andy /usr/local/bin/nosqlbooster
+
+
+# 5. 终端临时启动，验证是否能运行
+# 方式1：直接调用 /opt 目录下的可执行文件
+/opt/nosqlbooster/nosqlbooster4mongo
+
+# 方式2：用我们创建的全局软链接（更简洁，任意目录都能输）
+nosqlbooster
+
+# 6. 桌面快捷方式
+# 复制到桌面并赋予权限
+cp /usr/share/applications/nosqlbooster.desktop ~/桌面/
+chmod +x ~/桌面/nosqlbooster.desktop
+#　右键桌面图标 → 允许启动 → 双击启动
+
+
+# 7. 创建桌面快捷方式（系统级）
+# 切换到 root 用户（输入密码后）
+sudo -i
+
+# 再执行创建快捷方式的命令（此时全程 root 权限）
+cat > /usr/share/applications/nosqlbooster.desktop << EOF
+[Desktop Entry]
+Name=NoSQLBooster for MongoDB
+Comment=MongoDB GUI Client (v10.0.8)
+Exec=/opt/nosqlbooster/nosqlbooster4mongo
+Icon=/opt/nosqlbooster/resources/app/static/icon.png
+Terminal=false
+Type=Application
+Categories=Development;Database;MongoDB;Utility;
+Encoding=UTF-8
+StartupWMClass=nosqlbooster4mongo
+Keywords=MongoDB;NoSQL;Client;GUI;
+EOF
+
+# 赋予文件正确权限
+chmod 644 /usr/share/applications/nosqlbooster.desktop
+
+# 退出 root 身份
+exit
+#　点击 Mint 左下角开始菜单 → 搜索 “NoSQLBooster” → 点击启动。
 
 ```
