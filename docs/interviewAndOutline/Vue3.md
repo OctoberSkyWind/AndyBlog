@@ -27,11 +27,12 @@
 
 #### 组件作用域 CSS
 
-
 #### CSS Modules
 
 #### CSS 中的 v-bind()
 
 ## 组件
+
 #### 父与子通信之props————简单数组接收，简单对象接收，复杂对象接收
-#### 组件通信之ref与defineExpose
+
+#### 组件通信之ref与defineExpose（通过触发事件）
