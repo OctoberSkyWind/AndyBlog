@@ -306,3 +306,39 @@ conda deactivate
 ```
 
 ### 安装 PyCharm
+
+```bash
+# 下载软件  当前版本是 pycharm-2025.2.5.tar.gz
+andy@andy-MS-7D90:~/下载$ pwd
+/home/andy/下载
+andy@andy-MS-7D90:~/下载$ ls|grep pycharm
+pycharm-2025.2.5.tar.gz
+
+# 1. 打开终端并进入下载目录
+cd /home/andy/下载
+
+# 2. 解压安装包到全局目录 /opt 
+sudo tar -zxvf pycharm-2025.2.5.tar.gz -C /opt/
+
+# 3. 创建软链接
+# 先验证解压后的文件夹名称（防止名称不一致）：
+ls /opt | grep pycharm
+
+# 创建软链接（将 pycharm-2025.2.5 链接为 pycharm，简化路径）：
+sudo ln -s /opt/pycharm-2025.2.5 /opt/pycharm
+
+# 4. 启动 PyCharm
+cd /opt/pycharm/bin
+./pycharm.sh
+
+# 5. 创建 Mint 桌面快捷方式（永久生效）同上
+
+# 6. 添加命令行快捷启动（可选，终端一键启动）
+# 实现 任意终端输入 pycharm 即可启动，可创建别名：
+vim ~/.bashrc
+# 文件末尾添加
+# PyCharm 快捷启动别名
+alias pycharm='/opt/pycharm/bin/pycharm.sh'
+# 配置环境变量
+source ~/.bashrc
+```
