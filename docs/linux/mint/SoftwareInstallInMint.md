@@ -218,8 +218,19 @@ exit
 #　点击 Mint 左下角开始菜单 → 搜索 “NoSQLBooster” → 点击启动。
 
 ```
+
 ### uTools
+
 - 配置开启自动启动
+
 ```bash
+
+```
+
+### 安装 Anaconda
+
+```bash
+
+
 
 ```
