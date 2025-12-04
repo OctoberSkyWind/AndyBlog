@@ -229,8 +229,80 @@ exit
 
 ### 安装 Anaconda
 
+- 安装时间点 2025-12-04 10:04:08
+    - 基于该时间点下选择的版本和安装方式
+
 ```bash
+# 1. 更新系统依赖（可选但推荐，避免安装时缺失依赖）
+sudo apt update && sudo apt upgrade -y
+
+# 2. 安装下载/解压必需工具
+sudo apt install wget bzip2 -y
+
+# 3. 切换到用下载目录（避免下载到零散目录，方便查找），创建一个 Anaconda 目录
+cd /home/andy/AndyHome/DownLoad
+mkdir -p Anaconda
+
+andy@andy-MS-7D90:~/AndyHome/DownLoad/Anaconda$ pwd
+/home/andy/AndyHome/DownLoad/Anaconda
+
+# 4. 下载2025.06-1 Linux x86_64版本（官方直链，无需登录）
+wget https://repo.anaconda.com/archive/Anaconda3-2025.06-1-Linux-x86_64.sh
+
+# 5. 校验安装包完整性（关键！避免文件损坏导致安装失败）
+echo "82976426a2c91fe1453281def386f9ebebd8fdb45dc6c970b54cfef4e9120857 *Anaconda3-2025.06-1-Linux-x86_64.sh" | shasum -a 256 --check
+
+# 6. 运行安装程序
+
+bash Anaconda3-2025.06-1-Linux-x86_64.sh
+# 有一些交互，包括安装位置选择，注入环境变量等等，
+# 我这边选择的安装目录如下  /home/andy/AndyHome/anaconda3
+# Anaconda3 will now be installed into this location:
+# /home/andy/anaconda3
+#  - Press ENTER to confirm the location
+#  - Press CTRL-C to abort the installation
+#  - Or specify a different location below
+# [/home/andy/anaconda3] >>> /home/andy/AndyHome/anaconda3
 
 
 
+#　7. 生效环境变量
+# 适配默认bash终端
+source ~/.bashrc
+
+# 8. 配置 conda的环境变量
+# 搜索anaconda3目录（默认在用户主目录，若你改了安装路径需对应调整）
+find ~ -name "anaconda3"
+
+# 8. 验证安装是否成功（可以重开一个bash）
+conda --version
+# 成功输出示例：conda 24.9.0（版本号随安装包略有差异）
+python --version
+# 成功输出示例：Python 3.11.9 :: Anaconda, Inc.
+anaconda-navigator
+# 成功会弹出Anaconda图形管理窗口
+
+#　9. 优化配置
+## 关闭base环境自动激活（避免终端前缀一直显示(base)）
+conda config --set auto_activate_base false
+
+# 配置清华镜像源（国内用户必做，加速包下载，翻墙下载速度还可以 可以不配置）
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --set show_channel_urls yes
+
+# 10. 常用操作
+# 手动激活base环境（关闭自动激活后，需要时执行）
+conda activate base
+
+# 创建新环境（示例：创建python3.10的环境，命名为myenv）
+conda create -n myenv python=3.10
+
+# 激活新环境
+conda activate myenv
+
+# 退出当前环境
+conda deactivate
 ```
+
+### 安装 PyCharm
