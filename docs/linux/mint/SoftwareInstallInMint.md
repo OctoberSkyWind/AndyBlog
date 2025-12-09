@@ -59,6 +59,27 @@ cd /opt/DataGrip-2025.2.4/bin
 
 
 ```
+### goLand
+```bash
+# 1. 先行下载 tar包，这里下载了  goland-2025.2.5.tar.gz 
+andy@andy-MS-7D90:~/下载$ ll |grep goland
+-rw-rw-r--  1 andy andy 1224607298 12月  5 15:50 goland-2025.2.5.tar.gz
+andy@andy-MS-7D90:~/下载$ pwd
+/home/andy/下载
+
+# 2. 解压压缩包到 /opt 目录
+sudo tar -zxvf goland-2025.2.5.tar.gz -C /opt/
+
+# 3. 简化目录名称
+sudo mv /opt/GoLand-2025.2.5 /opt/goland
+
+# 4. 启动 GoLand（首次启动，不要用 root 权限）
+cd /opt/goland/bin
+./goland.sh
+
+# 5.创建桌面快捷方式
+# 同 datagrip 一样，创建桌面快捷方式
+```
 
 ### WebStrom
 
