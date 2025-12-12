@@ -252,17 +252,45 @@ exit
 
 ### 安装 uv
 
-- 安装时间点 2025-12-12 13:59:37
-    - 基于该时间点下选择的版本和安装方式
+> 安装时间点 2025-12-12 13:59:37
+> 基于该时间点下选择的版本和安装方式
 
 ```bash 
+# 1. 先行下载 uv 相关版本
+andy@andy-MS-7D90:~/下载$ ls |grep uv
+uv-x86_64-unknown-linux-gnu.tar.gz
+andy@andy-MS-7D90:~/下载$ pwd
+/home/andy/下载
+
+# 2. 解压
+cd /home/andy/下载
+# 解压压缩包（-x 解压，-z 处理gz，-v 显示过程，-f 指定文件）
+tar -xzvf uv-x86_64-unknown-linux-gnu.tar.gz
+
+
+# 3. 将 uv 移动到系统可执行路径
+# 复制 uv 可执行文件到 /usr/local/bin（需要 sudo 权限）
+sudo cp uv-x86_64-unknown-linux-gnu/uv /usr/local/bin/
+
+# 4. 赋予执行权限（可选，确保权限正确）
+sudo chmod +x /usr/local/bin/uv
+
+# 5. 验证安装
+uv --version
+
+# 6. 清理临时文件
+rm -rf uv-x86_64-unknown-linux-gnu/
+
+# 7.检查 /usr/local/bin 是否在 PATH中（可选）
+
+
 
 ```
 
 ### 安装 Anaconda
 
-- 安装时间点 2025-12-04 10:04:08
-    - 基于该时间点下选择的版本和安装方式
+> 安装时间点 2025-12-04 10:04:08
+> 基于该时间点下选择的版本和安装方式
 
 ```bash
 # 1. 更新系统依赖（可选但推荐，避免安装时缺失依赖）
