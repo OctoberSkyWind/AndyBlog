@@ -59,7 +59,9 @@ cd /opt/DataGrip-2025.2.4/bin
 
 
 ```
+
 ### goLand
+
 ```bash
 # 1. 先行下载 tar包，这里下载了  goland-2025.2.5.tar.gz 
 andy@andy-MS-7D90:~/下载$ ll |grep goland
@@ -245,6 +247,15 @@ exit
 - 配置开启自动启动
 
 ```bash
+
+```
+
+### 安装 uv
+
+- 安装时间点 2025-12-12 13:59:37
+    - 基于该时间点下选择的版本和安装方式
+
+```bash 
 
 ```
 
