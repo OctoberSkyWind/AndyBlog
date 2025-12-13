@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.20" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const useChoice = localStorage.getItem('vuepress-color-scheme')
+      const systemStatus =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (useChoice === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (useChoice === 'dark' || systemStatus) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <title>SoftwareInstallInMint | VuePress</title><meta name="description" content="My first VuePress Site">
+    <link rel="stylesheet" href="/AndyBlog/assets/css/styles.f10c3395.css">
+    <link rel="preload" href="/AndyBlog/assets/js/runtime~app.98cf7aa3.js" as="script"><link rel="preload" href="/AndyBlog/assets/css/styles.f10c3395.css" as="style"><link rel="preload" href="/AndyBlog/assets/js/933.074b0ba1.js" as="script"><link rel="preload" href="/AndyBlog/assets/js/app.ed53cc93.js" as="script">
+    <link rel="prefetch" href="/AndyBlog/assets/js/andy-interview-outline_os_linux_mint_SoftwareInstallInMint.html.2321ef04.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/andy-interview-outline_db-sql-nosql_postgresql.html.dcaf2a6f.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/andy-interview-outline_programming-language-base_Vue3.html.80994d87.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/andy-study-notes_code-pit-diary_JUC系列.html.82f1b4ac.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/get-started.html.9c33a374.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/andy-interview-outline_ai_numpy和pandas.html.ffed02ec.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/andy-study-notes_software-experience_WorkSoftwareUsage.html.d1a95006.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/andy-study-notes_code-pit-diary_Mybatis系列.html.27952205.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/index.html.b8dfeb8c.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/andy-interview-outline_programming-language-base_python-base.html.9f7e91ba.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/posts_sticky2.html.83cc104c.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/andy-study-notes_code-pit-diary_SQLite.html.dcf623f7.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/andy-study-notes_code-pit-diary_JPA.html.774c0207.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/posts_archive2.html.d128346a.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/posts_archive1.html.7c5aff6c.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/posts_article10.html.f9654ae4.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/posts_article12.html.011e0fae.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/posts_article11.html.22008837.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/posts_article3.html.67bcfe5c.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/posts_article4.html.618e44e7.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/posts_article5.html.081ae9c4.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/posts_article6.html.5e629dc0.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/posts_article7.html.a5c66c9b.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/posts_article8.html.f1f0c51b.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/posts_article9.html.981179a7.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/posts_article1.html.e8839bbb.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/posts_article2.html.7ae312a3.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/posts_sticky.html.951ed643.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/andy-interview-outline_programming-language-base_JS和TS.html.84506ca3.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/java_JacksonJournal.html.a965bace.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/andy-study-notes_code-pit-diary_Spring系列.html.6c560086.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/category_category-a_index.html.a089dfe6.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/category_category-b_index.html.ab58fe7c.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/category_category-c_index.html.94577837.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/category_history_index.html.4301d576.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/tag_tag-a_index.html.6d6e6a84.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/tag_tag-d_index.html.6563b0d4.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/tag_tag-e_index.html.8b3cd402.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/tag_tag-b_index.html.4c3e17e6.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/tag_tag-c_index.html.c5882cdc.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/category_index.html.74f6cb4f.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/tag_wwii_index.html.ceffe159.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/tag_wwi_index.html.4eaa226f.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/404.html.83462af6.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/timeline_index.html.df281e17.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/article_index.html.f58d0500.js" as="script"><link rel="prefetch" href="/AndyBlog/assets/js/tag_index.html.72c51f01.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container external-link-icon" vp-container><!--[--><header class="vp-navbar" vp-navbar><div class="vp-toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a class="route-link" href="/AndyBlog/"><img class="vp-site-logo" src="https://vuejs.press/images/hero.png" alt="VuePress"><span class="vp-site-name vp-hide-mobile" aria-hidden="true">VuePress</span></a></span><div class="vp-navbar-items-wrapper" style=""><!--[--><!--]--><nav class="vp-navbar-items vp-hide-mobile" aria-label="site navigation"><!--[--><div class="vp-navbar-item"><a class="route-link auto-link" href="/AndyBlog/" aria-label="Home"><!--[--><!--[--><!--]--><!--]-->Home<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/AndyBlog/article/" aria-label="Article"><!--[--><!--[--><!--]--><!--]-->Article<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/AndyBlog/category/" aria-label="Category"><!--[--><!--[--><!--]--><!--]-->Category<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/AndyBlog/tag/" aria-label="Tag"><!--[--><!--[--><!--]--><!--]-->Tag<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/AndyBlog/timeline/" aria-label="Timeline"><!--[--><!--[--><!--]--><!--]-->Timeline<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link route-link-active auto-link" href="/AndyBlog/andy-interview-outline/" aria-label="andy-interview-outline"><!--[--><!--[--><!--]--><!--]-->andy-interview-outline<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/AndyBlog/java/" aria-label="java"><!--[--><!--[--><!--]--><!--]-->java<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/AndyBlog/linux/" aria-label="linux"><!--[--><!--[--><!--]--><!--]-->linux<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/AndyBlog/code-pit-diary/" aria-label="code-pit-diary"><!--[--><!--[--><!--]--><!--]-->code-pit-diary<!--[--><!--[--><!--]--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button type="button" class="vp-toggle-color-mode-button" title="toggle color mode"><svg class="light-icon" viewbox="0 0 32 32" style=""><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg class="dark-icon" viewbox="0 0 32 32" style="display:none;"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><!--]--><div class="vp-sidebar-mask"></div><!--[--><aside class="vp-sidebar" vp-sidebar><nav class="vp-navbar-items" aria-label="site navigation"><!--[--><div class="vp-navbar-item"><a class="route-link auto-link" href="/AndyBlog/" aria-label="Home"><!--[--><!--[--><!--]--><!--]-->Home<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/AndyBlog/article/" aria-label="Article"><!--[--><!--[--><!--]--><!--]-->Article<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/AndyBlog/category/" aria-label="Category"><!--[--><!--[--><!--]--><!--]-->Category<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/AndyBlog/tag/" aria-label="Tag"><!--[--><!--[--><!--]--><!--]-->Tag<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/AndyBlog/timeline/" aria-label="Timeline"><!--[--><!--[--><!--]--><!--]-->Timeline<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link route-link-active auto-link" href="/AndyBlog/andy-interview-outline/" aria-label="andy-interview-outline"><!--[--><!--[--><!--]--><!--]-->andy-interview-outline<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/AndyBlog/java/" aria-label="java"><!--[--><!--[--><!--]--><!--]-->java<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/AndyBlog/linux/" aria-label="linux"><!--[--><!--[--><!--]--><!--]-->linux<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/AndyBlog/code-pit-diary/" aria-label="code-pit-diary"><!--[--><!--[--><!--]--><!--]-->code-pit-diary<!--[--><!--[--><!--]--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="vp-sidebar-items"><!--[--><li><p tabindex="0" class="vp-sidebar-item vp-sidebar-heading">SoftwareInstallInMint <!----></p><!----></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="vp-page"><!--[--><!--]--><div vp-content><!--[--><!--]--><div><h1 id="softwareinstallinmint" tabindex="-1"><a class="header-anchor" href="#softwareinstallinmint"><span>SoftwareInstallInMint</span></a></h1><p>[TOC]</p><nav class="table-of-contents"><ul><li><a aria-current="page" href="/AndyBlog/andy-interview-outline/os/linux/mint/SoftwareInstallInMint.html#环境" class="router-link-active router-link-exact-active">环境</a></li><li><a aria-current="page" href="/AndyBlog/andy-interview-outline/os/linux/mint/SoftwareInstallInMint.html#软件安装" class="router-link-active router-link-exact-active">软件安装</a><ul><li><a aria-current="page" href="/AndyBlog/andy-interview-outline/os/linux/mint/SoftwareInstallInMint.html#datagrip" class="router-link-active router-link-exact-active">datagrip</a></li><li><a aria-current="page" href="/AndyBlog/andy-interview-outline/os/linux/mint/SoftwareInstallInMint.html#goland" class="router-link-active router-link-exact-active">goLand</a></li><li><a aria-current="page" href="/AndyBlog/andy-interview-outline/os/linux/mint/SoftwareInstallInMint.html#webstrom" class="router-link-active router-link-exact-active">WebStrom</a></li><li><a aria-current="page" href="/AndyBlog/andy-interview-outline/os/linux/mint/SoftwareInstallInMint.html#nvm" class="router-link-active router-link-exact-active">nvm</a></li><li><a aria-current="page" href="/AndyBlog/andy-interview-outline/os/linux/mint/SoftwareInstallInMint.html#nosqlbooster" class="router-link-active router-link-exact-active">NoSQLBooster</a></li><li><a aria-current="page" href="/AndyBlog/andy-interview-outline/os/linux/mint/SoftwareInstallInMint.html#utools" class="router-link-active router-link-exact-active">uTools</a></li><li><a aria-current="page" href="/AndyBlog/andy-interview-outline/os/linux/mint/SoftwareInstallInMint.html#安装-uv" class="router-link-active router-link-exact-active">安装 uv</a></li><li><a aria-current="page" href="/AndyBlog/andy-interview-outline/os/linux/mint/SoftwareInstallInMint.html#安装-anaconda" class="router-link-active router-link-exact-active">安装 Anaconda</a></li><li><a aria-current="page" href="/AndyBlog/andy-interview-outline/os/linux/mint/SoftwareInstallInMint.html#安装-pycharm" class="router-link-active router-link-exact-active">安装 PyCharm</a></li></ul></li></ul></nav><h2 id="环境" tabindex="-1"><a class="header-anchor" href="#环境"><span>环境</span></a></h2><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code><span class="line"></span>
+<span class="line">andy@andy-MS-7D90:~/AndyHome/nvm$ <span class="token function">cat</span> /etc/os-release </span>
+<span class="line"><span class="token assign-left variable">NAME</span><span class="token operator">=</span><span class="token string">&quot;Linux Mint&quot;</span></span>
+<span class="line"><span class="token assign-left variable">VERSION</span><span class="token operator">=</span><span class="token string">&quot;22.1 (Xia)&quot;</span></span>
+<span class="line"><span class="token assign-left variable">ID</span><span class="token operator">=</span>linuxmint</span>
+<span class="line"><span class="token assign-left variable">ID_LIKE</span><span class="token operator">=</span><span class="token string">&quot;ubuntu debian&quot;</span></span>
+<span class="line"><span class="token assign-left variable">PRETTY_NAME</span><span class="token operator">=</span><span class="token string">&quot;Linux Mint 22.1&quot;</span></span>
+<span class="line"><span class="token assign-left variable">VERSION_ID</span><span class="token operator">=</span><span class="token string">&quot;22.1&quot;</span></span>
+<span class="line"><span class="token assign-left variable">HOME_URL</span><span class="token operator">=</span><span class="token string">&quot;https://www.linuxmint.com/&quot;</span></span>
+<span class="line"><span class="token assign-left variable">SUPPORT_URL</span><span class="token operator">=</span><span class="token string">&quot;https://forums.linuxmint.com/&quot;</span></span>
+<span class="line"><span class="token assign-left variable">BUG_REPORT_URL</span><span class="token operator">=</span><span class="token string">&quot;http://linuxmint-troubleshooting-guide.readthedocs.io/en/latest/&quot;</span></span>
+<span class="line"><span class="token assign-left variable">PRIVACY_POLICY_URL</span><span class="token operator">=</span><span class="token string">&quot;https://www.linuxmint.com/&quot;</span></span>
+<span class="line"><span class="token assign-left variable">VERSION_CODENAME</span><span class="token operator">=</span>xia</span>
+<span class="line"><span class="token assign-left variable">UBUNTU_CODENAME</span><span class="token operator">=</span>noble</span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line">andy@andy-MS-7D90:~/AndyHome/nvm$ lsb_release <span class="token parameter variable">-a</span></span>
+<span class="line">No LSB modules are available.</span>
+<span class="line">Distributor ID: Linuxmint</span>
+<span class="line">Description:    Linux Mint <span class="token number">22.1</span></span>
+<span class="line">Release:        <span class="token number">22.1</span></span>
+<span class="line">Codename:       xia</span>
+<span class="line"></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="软件安装" tabindex="-1"><a class="header-anchor" href="#软件安装"><span>软件安装</span></a></h2><h3 id="datagrip" tabindex="-1"><a class="header-anchor" href="#datagrip"><span>datagrip</span></a></h3><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code><span class="line"><span class="token comment"># 1.先行下载 tar包，这里下载了 datagrip-2025.2.4.tar.gz </span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 2. 然后进入 下载目录 </span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 3. 解压到 /opt 目录（需 sudo 权限，全局可见）</span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">tar</span> <span class="token parameter variable">-zxvf</span> datagrip-2025.2.4.tar.gz <span class="token parameter variable">-C</span> /opt/</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 4. （可选）为解压后的文件夹创建软链接（方便后续升级/调用）</span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">ln</span> <span class="token parameter variable">-s</span> /opt/datagrip-2025.2.4 /opt/datagrip</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 5.进入 DataGrip 的 bin 目录</span></span>
+<span class="line"><span class="token builtin class-name">cd</span> /opt/DataGrip-2025.2.4/bin</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 6.运行启动脚本</span></span>
+<span class="line">./datagrip.sh</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 7.生成快捷键</span></span>
+<span class="line"><span class="token comment"># 打开 DataGrip，点击顶部菜单栏 Tools → Create Desktop Entry...；</span></span>
+<span class="line"><span class="token comment"># 在弹窗中勾选 Create the entry for all users（可选，全局生效），点击 OK；</span></span>
+<span class="line"><span class="token comment"># 关闭 DataGrip，在 Mint 的应用程序菜单（左下角九宫格）中搜索 “DataGrip”，即可点击启动。</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="goland" tabindex="-1"><a class="header-anchor" href="#goland"><span>goLand</span></a></h3><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code><span class="line"><span class="token comment"># 1. 先行下载 tar包，这里下载了  goland-2025.2.5.tar.gz </span></span>
+<span class="line">andy@andy-MS-7D90:~/下载$ ll <span class="token operator">|</span><span class="token function">grep</span> goland</span>
+<span class="line">-rw-rw-r--  <span class="token number">1</span> andy andy <span class="token number">1224607298</span> <span class="token number">12</span>月  <span class="token number">5</span> <span class="token number">15</span>:50 goland-2025.2.5.tar.gz</span>
+<span class="line">andy@andy-MS-7D90:~/下载$ <span class="token builtin class-name">pwd</span></span>
+<span class="line">/home/andy/下载</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 2. 解压压缩包到 /opt 目录</span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">tar</span> <span class="token parameter variable">-zxvf</span> goland-2025.2.5.tar.gz <span class="token parameter variable">-C</span> /opt/</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 3. 简化目录名称</span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">mv</span> /opt/GoLand-2025.2.5 /opt/goland</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 4. 启动 GoLand（首次启动，不要用 root 权限）</span></span>
+<span class="line"><span class="token builtin class-name">cd</span> /opt/goland/bin</span>
+<span class="line">./goland.sh</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 5.创建桌面快捷方式</span></span>
+<span class="line"><span class="token comment"># 同 datagrip 一样，创建桌面快捷方式</span></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="webstrom" tabindex="-1"><a class="header-anchor" href="#webstrom"><span>WebStrom</span></a></h3><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code><span class="line"><span class="token comment">#　１．先行下载了　WebStorm</span></span>
+<span class="line"><span class="token comment">#andy@andy-MS-7D90:~/下载$ ls |grep Storm</span></span>
+<span class="line"><span class="token comment">#WebStorm-2025.2.5.tar.gz</span></span>
+<span class="line"><span class="token comment">#andy@andy-MS-7D90:~/下载$ pwd</span></span>
+<span class="line"><span class="token comment">#/home/andy/下载</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># ２．进入下载目录</span></span>
+<span class="line"><span class="token builtin class-name">cd</span> /home/andy/下载</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 解压到 /opt 目录（sudo 确保权限）</span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">tar</span> <span class="token parameter variable">-zxvf</span> WebStorm-2025.2.5.tar.gz <span class="token parameter variable">-C</span> /opt/</span>
+<span class="line"><span class="token comment"># 重命名解压后的文件夹,名称可能有差异，自行调整</span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">mv</span> /opt/WebStorm-2025.2.5 /opt/webstorm</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 进入 webstorm 的 bin 目录</span></span>
+<span class="line"><span class="token builtin class-name">cd</span> /opt/webstorm/bin</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 启动 WebStorm(启动时不要用root启动)</span></span>
+<span class="line">./webstorm.sh</span>
+<span class="line"></span>
+<span class="line"><span class="token comment">#创建桌面快捷方式（同上）</span></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="nvm" tabindex="-1"><a class="header-anchor" href="#nvm"><span>nvm</span></a></h3><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code><span class="line"><span class="token comment"># 1. 先行下载了 nvm-0.40.3.tar.gz 并创建 mkdir -p /home/andy/AndyHome/nvm（用于安装nvm的目录）</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment">#andy@andy-MS-7D90:~/下载$ ll |grep nvm</span></span>
+<span class="line"><span class="token comment">#-rw-rw-r--  1 andy andy     346428 11月 25 09:38 nvm-0.40.3.tar.gz</span></span>
+<span class="line"><span class="token comment">#andy@andy-MS-7D90:~/下载$ pwd</span></span>
+<span class="line"><span class="token comment">#/home/andy/下载</span></span>
+<span class="line"><span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /home/andy/AndyHome/nvm</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 2. 进入下载目录，解压</span></span>
+<span class="line"><span class="token comment"># -zxvf：解压 .tar.gz 格式文件（z = 解压 gzip，x = 提取文件，v = 显示过程，f = 指定文件）；</span></span>
+<span class="line"><span class="token comment"># -C ~/.nvm：指定解压到用户主目录的 .nvm 文件夹（自动创建）；</span></span>
+<span class="line"><span class="token comment"># --strip-components=1：去除解压后目录的外层（避免 .nvm/nvm-0.40.3 嵌套）。</span></span>
+<span class="line"><span class="token builtin class-name">cd</span> /home/andy/下载</span>
+<span class="line"><span class="token function">tar</span> <span class="token parameter variable">-zxvf</span> nvm-0.40.3.tar.gz <span class="token parameter variable">-C</span> /home/andy/AndyHome/nvm --strip-components<span class="token operator">=</span><span class="token number">1</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 3. 配置环境变量</span></span>
+<span class="line"><span class="token function">vim</span> ~/.bashrc0</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 行末加上</span></span>
+<span class="line"><span class="token comment"># 配置 nvm 安装路径（核心）</span></span>
+<span class="line"><span class="token builtin class-name">export</span> <span class="token assign-left variable">NVM_DIR</span><span class="token operator">=</span><span class="token string">&quot;/home/andy/AndyHome/nvm&quot;</span></span>
+<span class="line"><span class="token comment"># 加载 nvm 核心脚本</span></span>
+<span class="line"><span class="token punctuation">[</span> <span class="token parameter variable">-s</span> <span class="token string">&quot;<span class="token variable">$NVM_DIR</span>/nvm.sh&quot;</span> <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">\</span>. <span class="token string">&quot;<span class="token variable">$NVM_DIR</span>/nvm.sh&quot;</span></span>
+<span class="line"><span class="token comment"># 加载 nvm 命令补全（可选，提升使用体验）</span></span>
+<span class="line"><span class="token punctuation">[</span> <span class="token parameter variable">-s</span> <span class="token string">&quot;<span class="token variable">$NVM_DIR</span>/bash_completion&quot;</span> <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">\</span>. <span class="token string">&quot;<span class="token variable">$NVM_DIR</span>/bash_completion&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span class="token builtin class-name">source</span> ~/.bashrc</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 4. 验证安装 nvm -v</span></span>
+<span class="line"><span class="token comment"># andy@andy-MS-7D90:~/AndyHome/nvm$ nvm -v</span></span>
+<span class="line"><span class="token comment"># 0.40.3</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 5. 安装  这里选了 20.19.1 版本</span></span>
+<span class="line"><span class="token comment"># 下载前 可以配置镜像源 我这使用了魔法 就没有配置</span></span>
+<span class="line">nvm <span class="token function">install</span> <span class="token number">20.19</span>.1</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 6. 设为默认版本（可选，避免每次终端重启重新切换）：</span></span>
+<span class="line">nvm <span class="token builtin class-name">alias</span> default <span class="token number">20.19</span>.1</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 7. 验证安装结果</span></span>
+<span class="line"><span class="token function">node</span> <span class="token parameter variable">-v</span></span>
+<span class="line"><span class="token function">npm</span> <span class="token parameter variable">-v</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment">#andy@andy-MS-7D90:~/AndyHome/nvm$ node -v</span></span>
+<span class="line"><span class="token comment">#v20.19.1</span></span>
+<span class="line"><span class="token comment">#andy@andy-MS-7D90:~/AndyHome/nvm$ npm -v</span></span>
+<span class="line"><span class="token comment">#10.8.2</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="nosqlbooster" tabindex="-1"><a class="header-anchor" href="#nosqlbooster"><span>NoSQLBooster</span></a></h3><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code><span class="line"><span class="token comment"># 1. 先行下载了 nosqlbooster4mongo-10.0.8.tar.gz </span></span>
+<span class="line"><span class="token comment"># andy@andy-MS-7D90:~/下载$ ls |grep nosql</span></span>
+<span class="line"><span class="token comment"># nosqlbooster4mongo-10.0.8.tar.gz</span></span>
+<span class="line"><span class="token comment"># andy@andy-MS-7D90:~/下载$ pwd</span></span>
+<span class="line"><span class="token comment"># /home/andy/下载</span></span>
+<span class="line"><span class="token comment"># andy@andy-MS-7D90:~/下载$ </span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 2. 安装系统依赖（必装）</span></span>
+<span class="line"><span class="token comment"># 更新软件源</span></span>
+<span class="line"><span class="token function">apt</span> update</span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 3.仅安装系统仍支持的依赖（全部可正常定位）</span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> <span class="token parameter variable">-y</span> <span class="token punctuation">\</span></span>
+<span class="line">  libxss1 libnss3 libgtk-3-0t64 libnotify4 <span class="token punctuation">\</span></span>
+<span class="line">  libxtst6 libatspi2.0-0t64 libdrm2 libgbm1 libasound2t64 <span class="token punctuation">\</span></span>
+<span class="line">  libx11-xcb1 libxcb-dri3-0 libxrandr2 libxi6 <span class="token punctuation">\</span></span>
+<span class="line">  fonts-wqy-microhei fonts-wqy-zenhei</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 4.部署程序到 /opt（标准化安装）</span></span>
+<span class="line"><span class="token comment"># 创建安装目录</span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /opt/nosqlbooster</span>
+<span class="line"><span class="token comment"># 解压压缩包到 /opt（自动处理文件夹层级）</span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">tar</span> <span class="token parameter variable">-zxvf</span> /home/andy/下载/nosqlbooster4mongo-10.0.8.tar.gz <span class="token parameter variable">-C</span> /opt/nosqlbooster --strip-components<span class="token operator">=</span><span class="token number">1</span></span>
+<span class="line"><span class="token comment"># 赋予可执行权限</span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">chmod</span> +x /opt/nosqlbooster/nosqlbooster4mongo</span>
+<span class="line"><span class="token comment"># 建立全局软链接（任意目录可启动）</span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">ln</span> <span class="token parameter variable">-s</span> /opt/nosqlbooster/nosqlbooster4mongo /usr/local/bin/nosqlbooster</span>
+<span class="line"><span class="token comment"># 还原普通用户权限</span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">chown</span> <span class="token parameter variable">-R</span> andy:andy /opt/nosqlbooster</span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">chown</span> andy:andy /usr/local/bin/nosqlbooster</span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 5. 终端临时启动，验证是否能运行</span></span>
+<span class="line"><span class="token comment"># 方式1：直接调用 /opt 目录下的可执行文件</span></span>
+<span class="line">/opt/nosqlbooster/nosqlbooster4mongo</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 方式2：用我们创建的全局软链接（更简洁，任意目录都能输）</span></span>
+<span class="line">nosqlbooster</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 6. 桌面快捷方式</span></span>
+<span class="line"><span class="token comment"># 复制到桌面并赋予权限</span></span>
+<span class="line"><span class="token function">cp</span> /usr/share/applications/nosqlbooster.desktop ~/桌面/</span>
+<span class="line"><span class="token function">chmod</span> +x ~/桌面/nosqlbooster.desktop</span>
+<span class="line"><span class="token comment">#　右键桌面图标 → 允许启动 → 双击启动</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 7. 创建桌面快捷方式（系统级）</span></span>
+<span class="line"><span class="token comment"># 切换到 root 用户（输入密码后）</span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token parameter variable">-i</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 再执行创建快捷方式的命令（此时全程 root 权限）</span></span>
+<span class="line"><span class="token function">cat</span> <span class="token operator">&gt;</span> /usr/share/applications/nosqlbooster.desktop <span class="token operator">&lt;&lt;</span> <span class="token string">EOF</span>
+<span class="line">[Desktop Entry]</span>
+<span class="line">Name=NoSQLBooster for MongoDB</span>
+<span class="line">Comment=MongoDB GUI Client (v10.0.8)</span>
+<span class="line">Exec=/opt/nosqlbooster/nosqlbooster4mongo</span>
+<span class="line">Icon=/opt/nosqlbooster/resources/app/static/icon.png</span>
+<span class="line">Terminal=false</span>
+<span class="line">Type=Application</span>
+<span class="line">Categories=Development;Database;MongoDB;Utility;</span>
+<span class="line">Encoding=UTF-8</span>
+<span class="line">StartupWMClass=nosqlbooster4mongo</span>
+<span class="line">Keywords=MongoDB;NoSQL;Client;GUI;</span>
+<span class="line">EOF</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 赋予文件正确权限</span></span>
+<span class="line"><span class="token function">chmod</span> <span class="token number">644</span> /usr/share/applications/nosqlbooster.desktop</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 退出 root 身份</span></span>
+<span class="line"><span class="token builtin class-name">exit</span></span>
+<span class="line"><span class="token comment">#　点击 Mint 左下角开始菜单 → 搜索 “NoSQLBooster” → 点击启动。</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="utools" tabindex="-1"><a class="header-anchor" href="#utools"><span>uTools</span></a></h3><ul><li>配置开启自动启动</li></ul><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code><span class="line"></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><h3 id="安装-uv" tabindex="-1"><a class="header-anchor" href="#安装-uv"><span>安装 uv</span></a></h3><blockquote><p>安装时间点 2025-12-12 13:59:37 基于该时间点下选择的版本和安装方式</p></blockquote><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code><span class="line"><span class="token comment"># 1. 先行下载 uv 相关版本</span></span>
+<span class="line">andy@andy-MS-7D90:~/下载$ <span class="token function">ls</span> <span class="token operator">|</span><span class="token function">grep</span> uv</span>
+<span class="line">uv-x86_64-unknown-linux-gnu.tar.gz</span>
+<span class="line">andy@andy-MS-7D90:~/下载$ <span class="token builtin class-name">pwd</span></span>
+<span class="line">/home/andy/下载</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 2. 解压</span></span>
+<span class="line"><span class="token builtin class-name">cd</span> /home/andy/下载</span>
+<span class="line"><span class="token comment"># 解压压缩包（-x 解压，-z 处理gz，-v 显示过程，-f 指定文件）</span></span>
+<span class="line"><span class="token function">tar</span> <span class="token parameter variable">-xzvf</span> uv-x86_64-unknown-linux-gnu.tar.gz</span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 3. 将 uv 移动到系统可执行路径</span></span>
+<span class="line"><span class="token comment"># 复制 uv 可执行文件到 /usr/local/bin（需要 sudo 权限）</span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">cp</span> uv-x86_64-unknown-linux-gnu/uv /usr/local/bin/</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 4. 赋予执行权限（可选，确保权限正确）</span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">chmod</span> +x /usr/local/bin/uv</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 5. 验证安装</span></span>
+<span class="line">uv <span class="token parameter variable">--version</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 6. 清理临时文件</span></span>
+<span class="line"><span class="token function">rm</span> <span class="token parameter variable">-rf</span> uv-x86_64-unknown-linux-gnu/</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 7.检查 /usr/local/bin 是否在 PATH中（可选）</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="安装-anaconda" tabindex="-1"><a class="header-anchor" href="#安装-anaconda"><span>安装 Anaconda</span></a></h3><blockquote><p>安装时间点 2025-12-04 10:04:08 基于该时间点下选择的版本和安装方式</p></blockquote><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code><span class="line"><span class="token comment"># 1. 更新系统依赖（可选但推荐，避免安装时缺失依赖）</span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">apt</span> update <span class="token operator">&amp;&amp;</span> <span class="token function">sudo</span> <span class="token function">apt</span> upgrade <span class="token parameter variable">-y</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 2. 安装下载/解压必需工具</span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> <span class="token function">wget</span> <span class="token function">bzip2</span> <span class="token parameter variable">-y</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 3. 切换到用下载目录（避免下载到零散目录，方便查找），创建一个 Anaconda 目录</span></span>
+<span class="line"><span class="token builtin class-name">cd</span> /home/andy/AndyHome/DownLoad</span>
+<span class="line"><span class="token function">mkdir</span> <span class="token parameter variable">-p</span> Anaconda</span>
+<span class="line"></span>
+<span class="line">andy@andy-MS-7D90:~/AndyHome/DownLoad/Anaconda$ <span class="token builtin class-name">pwd</span></span>
+<span class="line">/home/andy/AndyHome/DownLoad/Anaconda</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 4. 下载2025.06-1 Linux x86_64版本（官方直链，无需登录）</span></span>
+<span class="line"><span class="token function">wget</span> https://repo.anaconda.com/archive/Anaconda3-2025.06-1-Linux-x86_64.sh</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 5. 校验安装包完整性（关键！避免文件损坏导致安装失败）</span></span>
+<span class="line"><span class="token builtin class-name">echo</span> <span class="token string">&quot;82976426a2c91fe1453281def386f9ebebd8fdb45dc6c970b54cfef4e9120857 *Anaconda3-2025.06-1-Linux-x86_64.sh&quot;</span> <span class="token operator">|</span> shasum <span class="token parameter variable">-a</span> <span class="token number">256</span> <span class="token parameter variable">--check</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 6. 运行安装程序</span></span>
+<span class="line"></span>
+<span class="line"><span class="token function">bash</span> Anaconda3-2025.06-1-Linux-x86_64.sh</span>
+<span class="line"><span class="token comment"># 有一些交互，包括安装位置选择，注入环境变量等等，</span></span>
+<span class="line"><span class="token comment"># 我这边选择的安装目录如下  /home/andy/AndyHome/anaconda3</span></span>
+<span class="line"><span class="token comment"># Anaconda3 will now be installed into this location:</span></span>
+<span class="line"><span class="token comment"># /home/andy/anaconda3</span></span>
+<span class="line"><span class="token comment">#  - Press ENTER to confirm the location</span></span>
+<span class="line"><span class="token comment">#  - Press CTRL-C to abort the installation</span></span>
+<span class="line"><span class="token comment">#  - Or specify a different location below</span></span>
+<span class="line"><span class="token comment"># [/home/andy/anaconda3] &gt;&gt;&gt; /home/andy/AndyHome/anaconda3</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span class="token comment">#　7. 生效环境变量</span></span>
+<span class="line"><span class="token comment"># 适配默认bash终端</span></span>
+<span class="line"><span class="token builtin class-name">source</span> ~/.bashrc</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 8. 配置 conda的环境变量</span></span>
+<span class="line"><span class="token comment"># 搜索anaconda3目录（默认在用户主目录，若你改了安装路径需对应调整）</span></span>
+<span class="line"><span class="token function">find</span> ~ <span class="token parameter variable">-name</span> <span class="token string">&quot;anaconda3&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 8. 验证安装是否成功（可以重开一个bash）</span></span>
+<span class="line">conda <span class="token parameter variable">--version</span></span>
+<span class="line"><span class="token comment"># 成功输出示例：conda 24.9.0（版本号随安装包略有差异）</span></span>
+<span class="line">python <span class="token parameter variable">--version</span></span>
+<span class="line"><span class="token comment"># 成功输出示例：Python 3.11.9 :: Anaconda, Inc.</span></span>
+<span class="line">anaconda-navigator</span>
+<span class="line"><span class="token comment"># 成功会弹出Anaconda图形管理窗口</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment">#　9. 优化配置</span></span>
+<span class="line"><span class="token comment">## 关闭base环境自动激活（避免终端前缀一直显示(base)）</span></span>
+<span class="line">conda config <span class="token parameter variable">--set</span> auto_activate_base <span class="token boolean">false</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 配置清华镜像源（国内用户必做，加速包下载，翻墙下载速度还可以 可以不配置）</span></span>
+<span class="line">conda config <span class="token parameter variable">--add</span> channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span>
+<span class="line">conda config <span class="token parameter variable">--add</span> channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span>
+<span class="line">conda config <span class="token parameter variable">--set</span> show_channel_urls <span class="token function">yes</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 10. 常用操作</span></span>
+<span class="line"><span class="token comment"># 手动激活base环境（关闭自动激活后，需要时执行）</span></span>
+<span class="line">conda activate base</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 创建新环境（示例：创建python3.10的环境，命名为myenv）</span></span>
+<span class="line">conda create <span class="token parameter variable">-n</span> myenv <span class="token assign-left variable">python</span><span class="token operator">=</span><span class="token number">3.10</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 激活新环境</span></span>
+<span class="line">conda activate myenv</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 退出当前环境</span></span>
+<span class="line">conda deactivate</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="安装-pycharm" tabindex="-1"><a class="header-anchor" href="#安装-pycharm"><span>安装 PyCharm</span></a></h3><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code><span class="line"><span class="token comment"># 下载软件  当前版本是 pycharm-2025.2.5.tar.gz</span></span>
+<span class="line">andy@andy-MS-7D90:~/下载$ <span class="token builtin class-name">pwd</span></span>
+<span class="line">/home/andy/下载</span>
+<span class="line">andy@andy-MS-7D90:~/下载$ <span class="token function">ls</span><span class="token operator">|</span><span class="token function">grep</span> pycharm</span>
+<span class="line">pycharm-2025.2.5.tar.gz</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 1. 打开终端并进入下载目录</span></span>
+<span class="line"><span class="token builtin class-name">cd</span> /home/andy/下载</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 2. 解压安装包到全局目录 /opt </span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">tar</span> <span class="token parameter variable">-zxvf</span> pycharm-2025.2.5.tar.gz <span class="token parameter variable">-C</span> /opt/</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 3. 创建软链接</span></span>
+<span class="line"><span class="token comment"># 先验证解压后的文件夹名称（防止名称不一致）：</span></span>
+<span class="line"><span class="token function">ls</span> /opt <span class="token operator">|</span> <span class="token function">grep</span> pycharm</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 创建软链接（将 pycharm-2025.2.5 链接为 pycharm，简化路径）：</span></span>
+<span class="line"><span class="token function">sudo</span> <span class="token function">ln</span> <span class="token parameter variable">-s</span> /opt/pycharm-2025.2.5 /opt/pycharm</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 4. 启动 PyCharm</span></span>
+<span class="line"><span class="token builtin class-name">cd</span> /opt/pycharm/bin</span>
+<span class="line">./pycharm.sh</span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 5. 创建 Mint 桌面快捷方式（永久生效）同上</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 6. 添加命令行快捷启动（可选，终端一键启动）</span></span>
+<span class="line"><span class="token comment"># 实现 任意终端输入 pycharm 即可启动，可创建别名：</span></span>
+<span class="line"><span class="token function">vim</span> ~/.bashrc</span>
+<span class="line"><span class="token comment"># 文件末尾添加</span></span>
+<span class="line"><span class="token comment"># PyCharm 快捷启动别名</span></span>
+<span class="line"><span class="token builtin class-name">alias</span> <span class="token assign-left variable">pycharm</span><span class="token operator">=</span><span class="token string">&#39;/opt/pycharm/bin/pycharm.sh&#39;</span></span>
+<span class="line"><span class="token comment"># 配置环境变量</span></span>
+<span class="line"><span class="token builtin class-name">source</span> ~/.bashrc</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div><!--[--><!--]--></div><footer class="vp-page-meta"><!----><div class="vp-meta-item git-info"><div class="vp-meta-item last-updated"><span class="meta-item-label">Last Updated:: </span><time class="meta-item-info" datetime="2025-12-13T06:06:22.000Z" data-allow-mismatch>12/13/25, 6:06 AM</time></div><div class="vp-meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: 839462320@qq.com">WhaleFall</span><!----><!--]--><!--]--></span></div></div></footer><!----><!--[--><!--]--></main><!--]--></div><!--[--><!----><!--]--><!--]--></div>
+    <script src="/AndyBlog/assets/js/runtime~app.98cf7aa3.js" defer></script><script src="/AndyBlog/assets/js/933.074b0ba1.js" defer></script><script src="/AndyBlog/assets/js/app.ed53cc93.js" defer></script>
+  </body>
+</html>
