@@ -31,8 +31,8 @@ export default defineUserConfig({
               link: '/timeline/',
           },
           {
-              text: 'interviewAndOutline',
-              link: '/interviewAndOutline/',
+              text: 'andy-interview-outline',
+              link: '/andy-interview-outline/',
           },
           {
               text: 'java',
@@ -43,8 +43,8 @@ export default defineUserConfig({
               link: '/linux/',
           },
           {
-              text: 'codePitDiary',
-              link: '/codePitDiary/',
+              text: 'code-pit-diary',
+              link: '/code-pit-diary/',
           },
       ],
   }),
