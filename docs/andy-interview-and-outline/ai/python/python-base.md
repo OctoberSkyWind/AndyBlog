@@ -37,3 +37,5 @@
 #### Queue::get() 从队列取出数据（物理操作），而task_done() 和 join() 的操作对象都是内部计数器，分别是减少内部计数器（逻辑标记）和检查计数器是否归零（同步等待）_
 
 
+## 异常
+#### Python 所有异常或错误均直接或间接继承 BaseException，无 Java 的 Exception/Error 划分，工程上绝大多数场景禁止 except: / except BaseException捕获所有异常，工程开发中，99% 的业务场景只需捕获 Exception；BaseException 的其他直接子类，属于「不应被业务代码捕获」的范畴。
