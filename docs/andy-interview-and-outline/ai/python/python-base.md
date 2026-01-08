@@ -16,7 +16,7 @@
 
 #### int类型：Python 3 中整数类型只有 int，它支持任意精度，可表示极大整数，其取值范围受系统内存（物理内存 + 虚拟内存）限制。
 
-##            
+##             
 
 #### Python 中的相对路径主要是相对于程序的当前工作目录（CWD),当前工作目录是 Python 解释器在运行时所处的目录,load_dotenv("./.env")加载时，是指的当前工作目录下的.env文件
 
@@ -47,6 +47,39 @@
 #### 生成器是定义中包含 yield 的函数，调用该函数并不会执行函数体，而是直接获得一个生成器实例（可以看成允许多次暂停、恢复的特殊的函数一次调用）；生成器执行时遇到 yield 会暂停并返回其后的值，next ()（等价于 send (None)）或 send () 可让其恢复执行，直到函数体执行完毕（生成器耗尽）；生成器的迭代本质是遍历多次 yield 返回的值，恢复执行时 yield 表达式会接收值 ——send () 可传入具体值，而 next () 仅传入 None，直至生成器最终耗尽。
 
 #### @contextmanager 装饰器将生成器函数转换为上下文管理器：yield 语句首次执行前的代码等价于上下文管理器的__enter__ 方法（进入上下文时执行）；yield 语句产生的首个值，是 with ... as 语句中 as 后变量接收的值（无返回值时可仅写 yield）；yield 语句首次执行后的所有代码（包括多轮 yield 后续逻辑）等价于上下文管理器的__exit__ 方法（退出上下文时执行）。需要注意的是，@contextmanager 封装的上下文管理器仅会执行到生成器的首个 yield，后续多轮 yield 不会被触发（若生成器包含多轮 yield，超出首个 yield 的逻辑需通过其他方式触发，并非上下文管理器的默认行为）。
+
+#### 通过 yield 关键字将遍历逻辑封装为生成器，调用时不会一次性生成并返回所有遍历结果，而是以 “执行到 yield 处返回一个值并暂停 → 等待下一次请求再恢复执行” 的方式，实现可暂停、可恢复的可控遍历。
+
+```python
+def square_generator(numbers):
+    """一个生成数字平方的生成器函数"""
+    for num in numbers:
+        # 遇到yield，返回当前值的平方，然后函数在此暂停
+        yield num * num
+        # 当生成器的__next__()被再次调用时，从这里恢复执行
+
+# 创建一个生成器对象
+my_numbers = [1, 2, 3, 4, 5]
+squares = square_generator(my_numbers)
+
+# 第一次调用next()，函数执行到第一个yield处暂停
+print(next(squares))  # 输出: 1
+
+# 第二次调用next()，函数从上次暂停处恢复，执行循环的下一次迭代，到yield处再次暂停
+print(next(squares))  # 输出: 4
+
+# 第三次调用next()
+print(next(squares))  # 输出: 9
+
+# 生成器也可以用在for循环中，for循环会自动处理next()和StopIteration
+print("使用for循环遍历剩余的值:")
+for value in squares: # 注意：此时生成器内部已经执行到第4个元素
+    print(value)
+# 输出:
+# 16
+# 25
+
+```
 
 ## 类型注解
 
