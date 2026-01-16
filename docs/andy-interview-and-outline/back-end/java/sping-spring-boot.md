@@ -10,4 +10,6 @@
 
 #### 使用场景三：Service 层校验任意类型参数，必须类上标注 @Validated、方法参数按需标注 @Valid/@Validated 或校验注解，原理是 Service 层无 MVC 参数解析器兜底，完全依赖类上 @Validated 触发的 AOP 代理完成校验。
 
+#### @Valid和@Validated区别
+
 ## Spring Boot
