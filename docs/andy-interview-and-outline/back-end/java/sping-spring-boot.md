@@ -4,7 +4,7 @@
 
 ### @Valid/@Validated
 
-#### 使用场景一：Controller 层校验自定义对象参数，无需类上标注 @Validated、方法参数标注 @Valid/@Validated 即可，原理是 Spring MVC 参数解析器解析参数时主动调用 JSR-380 校验器执行校验，不依赖 AOP 代理；
+#### 场景一：Controller 层校验 @RequestBody/@ModelAttribute/@RequestPart 标记的自定义对象参数，参数标注 @Valid/@Validated 即可（无需类上标注），无上述注解的自定义普通参数需类上 @Validated 才触发校验，原理是 Spring MVC 参数解析器检测到参数校验注解后直接调用校验器，不依赖 AOP 代理；
 
 #### 使用场景二：Controller 层校验 String/Integer 等简单类型参数，必须类上标注 @Validated、简单参数标注校验注解，原理是类上 @Validated 触发 AOP 代理创建，由拦截器扫描并调用校验器执行校验；
 
