@@ -1,3 +1,3 @@
 # python-web-fastapi
 
-##  
+#### FastAPI 本身不直接实现 HTTP 协议，底层依赖 Uvicorn 等 ASGI 服务器提供网络支撑，默认仅启用 HTTP/1.1，无需证书、配置最简单、兼容性最广；若要启用 HTTP/2，需配置 SSL 证书并通过 ASGI 服务器（如 Uvicorn）指定启用 HTTP/2 解析器（Uvicorn 需通过 --http=h11/--http=httptools 或启动参数显式支持），HTTP/2 本身虽可明文运行（h2c），但主流 ASGI 服务器（包括 Uvicorn）为遵循最佳安全实践，仅支持基于 TLS（HTTPS）的 HTTP/2；若要启用 HTTP/3，需安装支持 QUIC 协议的 Uvicorn 扩展版本（如 uvicorn[standard]）、配置兼容 TLS 1.3 的 SSL 证书并指定 QUIC 端口，HTTP/3 强制依赖 TLS 且目前仍属于 Uvicorn 的实验性特性（需通过 --http3 或 --quic 等专属参数启用，部分版本需搭配 --ssl-keyfile/--ssl-certfile 才能生效），生产环境需谨慎使用；实际部署中通常建议同时保留 HTTP/1.1 兼容，以覆盖不同版本协议的客户端，且 Uvicorn 启用 HTTP/3 时会自动兼容 HTTP/1.1 和 HTTP/2 over TLS（需确保 SSL 证书配置正确、且服务器版本支持多协议协商），无需额外配置多协议兼容。
