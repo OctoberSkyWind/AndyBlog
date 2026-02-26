@@ -109,6 +109,84 @@ cd /opt/webstorm/bin
 #创建桌面快捷方式（同上）
 ```
 
+###
+将下述内容写到 rustrover.sh
+chmod +x rustrover.sh
+./rustrover.sh
+```bash
+# ==============================================
+# RustRover 2025.3.4 安装脚本（Linux Mint 22.1）
+# ==============================================
+
+# 1. 进入下载目录（确保安装包在此目录下）
+cd /home/andy/下载
+
+# 2. 验证安装包是否存在
+if [ ! -f "RustRover-2025.3.4.tar.gz" ]; then
+    echo "错误：未找到 RustRover-2025.3.4.tar.gz 文件，请检查文件路径！"
+    exit 1
+fi
+
+# 3. 解压安装包到 /opt 目录（全局安装，需 sudo 权限）
+echo "开始解压 RustRover 安装包..."
+sudo tar -zxvf RustRover-2025.3.4.tar.gz -C /opt/
+
+# 4. 简化目录名称（创建统一的 rustrover 目录，方便后续管理）
+# 先检查解压后的目录名称（防止命名差异）
+UNZIP_DIR=$(ls /opt | grep -i "RustRover-2025.3.4")
+if [ -n "$UNZIP_DIR" ]; then
+    sudo mv /opt/$UNZIP_DIR /opt/rustrover
+    echo "目录重命名完成：/opt/rustrover"
+else
+    echo "警告：未找到解压后的 RustRover 目录，可能解压失败！"
+    exit 1
+fi
+
+# 5. 赋予普通用户执行权限（避免启动时权限问题）
+sudo chown -R andy:andy /opt/rustrover
+
+# 6. 启动 RustRover（首次启动不要用 root 权限）
+echo "准备启动 RustRover..."
+cd /opt/rustrover/bin
+./rustrover.sh &
+
+# 7. 创建系统级桌面快捷方式（可选，全局可见）
+echo "创建桌面快捷方式..."
+sudo cat > /usr/share/applications/rustrover.desktop << EOF
+[Desktop Entry]
+Name=RustRover
+Comment=JetBrains RustRover 2025.3.4 - Rust IDE
+Exec=/opt/rustrover/bin/rustrover.sh
+Icon=/opt/rustrover/bin/rustrover.svg
+Terminal=false
+Type=Application
+Categories=Development;IDE;Rust;
+Encoding=UTF-8
+StartupWMClass=rustrover
+Keywords=Rust;IDE;JetBrains;
+EOF
+
+# 8. 赋予快捷方式正确权限
+sudo chmod 644 /usr/share/applications/rustrover.desktop
+
+# 9. 可选：创建终端别名（任意目录输入 rustrover 即可启动）
+if ! grep -q "alias rustrover=" ~/.bashrc; then
+    echo -e "\n# RustRover 快捷启动别名" >> ~/.bashrc
+    echo "alias rustrover='/opt/rustrover/bin/rustrover.sh'" >> ~/.bashrc
+    # 立即生效别名（当前终端）
+    source ~/.bashrc
+    echo "终端别名已添加：输入 rustrover 即可启动"
+fi
+
+echo "=============================================="
+echo "RustRover 安装完成！"
+echo "启动方式："
+echo "  1. 终端输入：rustrover"
+echo "  2. 应用菜单搜索：RustRover"
+echo "  3. 执行脚本：/opt/rustrover/bin/rustrover.sh"
+echo "=============================================="
+```
+
 ### nvm
 
 ```bash
@@ -401,4 +479,43 @@ vim ~/.bashrc
 alias pycharm='/opt/pycharm/bin/pycharm.sh'
 # 配置环境变量
 source ~/.bashrc
+```
+
+
+### 安装 docker-compose
+```bash
+sudo curl -L "https://1ms.run/install/docker-compose/latest/$(uname -s)/$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+```
+
+### 安装 docker compose （v2）
+```bash
+# 先打印要执行的命令到控制台，再执行
+cat << 'EOF' && bash -c "$(cat << 'EOF'
+#!/bin/bash
+# 1. 清理旧版本
+sudo rm -rf /usr/local/bin/docker-compose /usr/bin/docker-compose
+sudo apt remove -y docker-compose
+# 2. 创建 Docker 插件目录
+sudo mkdir -p /usr/local/lib/docker/cli-plugins
+# 3. 下载 Compose v2 插件
+sudo curl -SL "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/lib/docker/cli-plugins/docker-compose
+# 4. 赋予执行权限
+sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
+# 5. 重启 Docker 服务
+sudo systemctl restart docker
+# 6. 输出成功提示
+echo -e "\033[32m=====================================\033[0m"
+echo -e "\033[32mDocker Compose v2 安装完成！\033[0m"
+echo -e "\033[32m=====================================\033[0m"
+EOF
+)"
+```
+
+### 基于 winboat 安装windows虚拟机
+```bash
+
+
+
 ```
